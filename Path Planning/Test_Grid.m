@@ -1,0 +1,16 @@
+%% Initialize the grid
+
+clear; clc; close all
+
+grid = [0,0,0,0,1,0; ...
+        0,0,0,0,1,0; ...
+        0,0,1,0,1,0; ...
+        0,0,1,0,1,0; ...
+        0,0,1,0,0,0; ...
+        0,0,1,0,0,0];
+
+Start = [6,1];
+End = [1,6];
+    
+Astar(Start,End,grid);
+
