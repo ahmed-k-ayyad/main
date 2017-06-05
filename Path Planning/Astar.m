@@ -1,5 +1,22 @@
 function [policy1D,expand,path] = Astar (Start,Goal,Grid)
+% this function is dedicated to perform the A* algorithm, it contains
+% only 4 motions (up,down,left,right) and computes the most optimized path
+% from a starting point to an ending point
 
+% the function inputs are the starting location, the goal location and the
+% grid which is a 2d map consists of zeros and ones where ones are the
+% barriers
+
+% it outputs 3 main matrices; policy1D which is the policy to move from the
+% starting location to the goal is a 1D array which can be one of 3 values
+% (F,R,L); F stands for moving forward while keeping the orientation, R
+% stands for moving forward then turning right and L stands for moving
+% forward and then turning left
+
+% the expand matrix is the matrix that holds all the expanded nodes while
+% calculating the optimum path
+
+% the path matrix is used only to printout the final path of the A*
 
     delta = [0,-1;1,0;0,1;-1,0];            % available 4 motions
     delta_actions = ['<','v','>','^'];      % symbols of the 4 motions
